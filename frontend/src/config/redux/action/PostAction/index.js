@@ -150,6 +150,7 @@ export const getAllTestimonials = createAsyncThunk(
   async (_, thunkAPI)=>{
     try{
       const response = await clientServer.get('/getTestimonials');
+      console.log(response);
       return thunkAPI.fulfillWithValue(response.data);
     }catch(err){
       return thunkAPI.rejectWithValue(
@@ -163,6 +164,7 @@ export const getAllTestimonialsForPage = createAsyncThunk(
   async (_, thunkAPI)=>{
     try{
       const response = await clientServer.get('/getTestimonialsAll');
+      console.log(response);
       return thunkAPI.fulfillWithValue(response.data);
     }catch(err){
       return thunkAPI.rejectWithValue(

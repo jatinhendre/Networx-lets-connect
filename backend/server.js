@@ -17,7 +17,7 @@ const server = http.createServer(app)
 
 const corsOptions = {
   origin: [
-    "https://networx-roan.vercel.app",
+    "https://networx-a-social-media-networking-p.vercel.app",
     "http://localhost:3000"
   ],
   credentials: true,
