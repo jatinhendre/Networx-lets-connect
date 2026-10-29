@@ -34,6 +34,9 @@ app.use(express.static('uploads'))
 app.get('/api/ping', (req, res) => {
   res.status(200).json({ message: 'Server is alive' })
 })
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok' })
+})
 app.use(postRoutes)
 app.use(userRoutes)
 app.use(notificationRoutes)
